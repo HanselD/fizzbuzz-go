@@ -3,8 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	for i:=0; i<=20; i++ {
-		
-		fmt.Println(i)
+	for num :=1; num <= 30; num++ {
+		result := ""
+		if num%3 == 0 {
+			result = "Fizz"
+		}
+		if num%5 == 0 {
+			result += "Buzz"
+		}
+		if result != "" {
+			fmt.Println(result)
+			continue
+		}
+		fmt.Println(num)
 	}
 }
